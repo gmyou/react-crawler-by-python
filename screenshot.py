@@ -5,12 +5,12 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 
-# chrome_options = Options()
-# chrome_options.add_argument('--headless')
-# chrome_options.add_argument('--start-maximized')
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--start-maximized')
 
-# driver = webdriver.Chrome(chrome_options=chrome_options, service=ChromeService(ChromeDriverManager().install()))
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+driver = webdriver.Chrome(options=chrome_options, service=ChromeService(ChromeDriverManager().install()))
+# driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 driver.get('https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=KR&q=kt.com&search_type=keyword_unordered&media_type=all')
 # driver.get('https://www.naver.com/')
 
