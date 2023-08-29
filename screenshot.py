@@ -26,8 +26,8 @@ time.sleep(5)
 
 print(driver.title)
 
-# screenshot after etire load
-if (driver.execute_script('return document.readyState') == 'complete'):
+# screenshot after entire load
+if driver.execute_script('return document.readyState') == 'complete':
     print('complete')
     driver.save_screenshot('screenshot.png')
 
